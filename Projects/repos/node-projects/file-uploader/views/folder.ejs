@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Folder: <%= folder.name %></title>
+</head>
+<body>
+  <h1>Folder: <%= folder.name %></h1>
+  <form action="/folders/<%= folder.id %>/edit" method="POST">
+    <input type="text" name="name" placeholder="Rename folder" required>
+    <button type="submit">Rename</button>
+  </form>
+  <form action="/folders/<%= folder.id %>/delete" method="POST" onsubmit="return confirm('Are you sure?');">
+    <button type="submit">Delete Folder</button>
+  </form>
+  <h2>Files:</h2>
+  <ul>
+    <% folder.files.forEach(function(file) { %>
+      <li>
+        <p><%= file.name %> (<%= file.size %> bytes) - <%= new Date(file.uploadTime).toLocaleString() %></p>
+        <a href="/files/<%= file.id %>">View Details</a>
+      </li>
+    <% }); %>
+  </ul>
+  <h3>Upload a new file to this folder:</h3>
+  <form action="/folders/<%= folder.id %>/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Upload File</button>
+  </form>
+  <a href="/folders">Back to Folders</a>
+</body>
+</html>

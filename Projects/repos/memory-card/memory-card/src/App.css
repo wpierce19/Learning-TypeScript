@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Smooch Sans", serif;
+}
+
+header {
+  height: 10%;
+  padding: 10px;
+  text-align: center;
+  background-color: #2a2a30;
+  color: aliceblue;
+}
+
+footer {
+  height: 10%;
+  text-align: center;
+  padding: 10px;
+  background-color: #2a2a30;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+
+
+.main-content {
+  height: 100%;
+  padding: 20px;
+  background: green;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+}
+
+.head-content {
+  text-align: center;
+  font-size: 24px;
+  color: aliceblue;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card-grid-hidden{
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  visibility: hidden;
+  height: 100vh;
+}
+
+.card {
+  max-width: 150px;
+  border: 1px black solid;
+  display: grid;
+  justify-content: center;
+  padding: 10px;
+  background-color: gray;
+  border-radius: 20px;
+}
+
+.card:hover {
+  transform: scale(0.9);
+  border: red 2px solid;
+  cursor: pointer;
+}
+
+.card-detail{
+  max-height: 20px;
+  text-align: center;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.modal, .restart-modal, .high-score {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid black;
+  width: 30%;
+  height: auto;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -100%);
+  background-color: wheat;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.modal p, .restart-modal p, .high-score p {
+  font-size: 24px;
+}
+
+
+.modal-hide, .restart-modal-hide, .high-score-hide {
+  display: none;
+}
+
+
+
+button {
+  font-size: 20px;
+  width: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+button:hover {
+  transform: scale(0.9);
+}

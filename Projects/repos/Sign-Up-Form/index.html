@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-container">
+            <div class="background-div"></div>
+            <div class="title">
+                <img src="odin-lined.png" alt="">
+                <h1>ODIN</h1>
+            </div>
+
+            <div class="credits">
+                <p>
+                    Photo by 
+                    <a href="https://unsplash.com/@haliewestphoto" target="_blank" rel="noreferrer noopenener">Halie West</a> 
+                    on 
+                    <a href="https://unsplash.com/" target="_blank" rel="noreferrer noopenener">Unsplash</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="right-container">
+            <div class="first-container">
+                <div class="text-wrapper">
+                    <h2>
+                        This is not a real online service! You know you need
+                        something like this in your life to help you realize
+                        your deepest dreams. Sign up <em>now</em> to get started.
+                    </h2>
+
+                    <h2>You <em>know</em> you want to.</h2>
+                </div>
+            </div>
+
+            <div class="second-container">
+                <h2>Let's do this!</h2>
+
+                <form action="#" method="post">
+                    <div class="names">
+                        <div class="fname">
+                            <label for="fname">FIRST NAME</label>
+                            <input type="text" name="first_name" id="fname" required placeholder="John">
+                        </div>
+
+                        <div class="lname">
+                            <label for="lname">LAST NAME</label>
+                            <input type="text" name="last_name" id="lname" required placeholder="Smith">
+                        </div>
+                    </div>
+
+                    <div class="information">
+                        <div class="email">
+                            <label for="mail">EMAIL</label>
+                            <input type="email" name="email" id="mail" required placeholder="examplemail@gmail.com">
+                        </div>
+
+                        <div class="number">
+                            <label for="number">PHONE NUMBER</label>
+                            <input type="tel" name="phone_number" id="number" required placeholder="1234567890" minlength="10" maxlength="10">
+                        </div>
+                    </div>
+
+                    <div class="passwords">
+                        <div class="password">
+                            <label for="pass">PASSWORD</label>
+                            <input type="password" name="password" id="pass" required minlength="8" placeholder="Minimum length is 8">
+                            <p class="password-check hidden">* Passwords do not match</p>
+                        </div>
+
+                        <div class="confirm-password">
+                            <label for="cpass">CONFIRM PASSWORD</label>
+                            <input type="password" id="cpass" required minlength="8" placeholder="Minimum length is 8">
+                        </div>
+                    </div>
+
+                    <div class="button">
+                        <button class="form-button">Create Account</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="log-in">
+                <p>Already have an account? <a href="#">Log in</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

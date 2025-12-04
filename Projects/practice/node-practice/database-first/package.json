@@ -1,0 +1,20 @@
+{
+  "name": "database-first",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-validation": "^4.1.1",
+    "express-validator": "^7.2.1",
+    "pg": "^8.13.3"
+  }
+}

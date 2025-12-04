@@ -1,0 +1,12 @@
+Database functions :
+-User can create/modify/delete container to hold images on the database
+-Only save image/file URL when the user uploads an image
+
+Functionality :
+-Use Cloudinary API for ease-of-use image/file uploading
+-ONLY authenicated users can upload files
+-Session based auth using passport(look at members-only project)
+-Use Prisma session library to persist session in the database
+
+Maybe:
+Use multer middleware to hold files in ecosystem till all other features are working

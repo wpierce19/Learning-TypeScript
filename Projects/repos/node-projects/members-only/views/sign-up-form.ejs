@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Sign Up</h1>
+
+    <% if (errors && errors.length > 0) { %>
+      <ul>
+        <% errors.forEach(function(error) { %>
+          <li style="color: red;"><%= error.msg %></li>
+        <% }) %>
+      </ul>
+    <% } %>
+
+    <% if (error_msg) { %>
+        <p style="color: red;"><%= error_msg %></p>
+    <% } %>
+
+    <% if (success_msg) { %>
+        <p style="color: green;"><%= success_msg %></p>
+    <% } %>
+
+    <form action="/newUser" method="POST">
+        <label for="firstName">First Name:</label>
+        <input id="firstName" name="firstName" type="text" required/>
+
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" name="lastName" type="text" required/>
+
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" required/>
+
+        <label for="password">Password:</label>
+        <input id="password" name="password" type="password" required/>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input id="confirmPassword" name="confirmPassword" type="password" required/>
+
+        <label for="adminPass">If you're an Admin enter passcode:</label>
+        <input id="adminPass" name="adminPass" type="text"/>
+
+        <button type="submit">Sign Up</button>
+    </form>
+</body>
+</html>
+

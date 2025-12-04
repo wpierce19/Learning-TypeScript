@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index</title>
+    </head>
+    <body>
+        <h1>All Usernames</h1>
+        <ul>
+            <% usernames.forEach( user => { %>
+                <li><%= user.username %></li>
+           <% }) %>
+        </ul>
+        <a href="/new">Create a Username</a>
+    </body>
+</html>

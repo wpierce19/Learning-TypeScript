@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+</head>
+<body>
+  <h1><%= title %></h1>
+  <%- include("partials/errors.ejs") %>
+
+  <form action="/create" method="POST">
+    <label for="firstName">First Name:</label>
+    <input type="text" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" name="lastName" required>
+
+    <button type="submit">Create User</button> <!-- Make sure this button exists -->
+  </form>
+
+  <a href="/">Back to home</a>
+</body>
+</html>
+
+

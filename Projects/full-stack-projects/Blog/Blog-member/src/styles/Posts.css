@@ -1,0 +1,39 @@
+.posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 24px;
+}
+
+.post {
+    position: relative;
+    header {
+        padding-right: 170px !important;
+    }
+}
+
+.posts .publishedStatus {
+    font-size: 0.7em;
+    color: white !important;
+    padding: 4px 8px;
+    border-radius: 2px;
+}
+
+.posts a {
+    text-decoration: none !important;
+    color: inherit;
+    articile * {
+        color: inherit
+    }
+}
+
+details.postActions {
+    position: absolute !important;
+    right: 12px;
+    top: 12px;
+
+    li a {
+        display: flex !important;
+        align-items: center;
+        gap: 8px;
+    }
+}

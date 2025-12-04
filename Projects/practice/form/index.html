@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+        .success {
+            color: green;
+            font-size: 1.2em;
+        }
+        input.invalid {
+            border: 1px solid red;
+        }
+        input.valid {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <form id="form" novalidate>
+      <div>
+        <p>
+            Email:
+            <input type="email" id="mail" name="mail">
+            <span class="error" id="emailError"></span>
+        </p>
+      </div>
+      <div>
+        <p>
+            Country:
+            <input id="country" type="text" required>
+            <span class="error" id="countryError"></span>
+        </p>
+      </div>
+      <div>
+        <p>
+            Zip-Code:
+            <input id="zip" type="number" required>
+            <span class="error" id="zipError"></span>
+        </p>
+      </div>
+      <div>
+        <p>
+            Password:
+            <input id="password" type="password" required>
+            <span class="error" id="passwordError"></span>
+        </p>
+      </div>
+      <button type="submit">Submit</button>  
+    </form>
+    <p class="success" id="successMessage"></p>
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,14 @@
+.postMeta,
+.commentsMeta,
+.commentMeta .authorEmail {
+    font-size: 0.8em;
+    color: var(--pico-secondary);
+}
+
+.commentSection details {
+    max-width: 720px;
+}
+
+.commentText {
+    font-size: 0.9em;
+}

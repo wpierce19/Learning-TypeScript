@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>File Details - <%= file.name %></title>
+</head>
+    <body>
+        <h1>File Details</h1>
+        <p>Name: <%= file.name %></p>
+        <p>Size: <%= file.size %> bytes</p>
+        <p>Uploaded: <%= new Date(file.uploadTime).toLocaleString() %></p>
+        <p>File URL: <a href="<%= file.fileUrl %>" target="_blank"><%= file.fileUrl %></a></p>
+        <a href="/files/<%= file.id %>/download">Download File</a>
+        <br/><br/>
+        <a href="/dashboard">Back to Dashboard</a>
+    </body>
+</html>

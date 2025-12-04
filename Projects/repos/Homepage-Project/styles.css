@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    will-change: contents;
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover{
+    transform: scale(1.25);
+    cursor: pointer;
+}
+
+.diagonal-box{
+    position: relative;
+    display: flex;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 8%;
+    flex-basis: content;
+}
+
+.diagonal-box::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: calc(-1*tan(11deg)*50vw);
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(8, 145, 178);	
+    transform: skewY(-11deg);
+}
+
+.about {
+    position: relative;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    height: min-content;
+    display: flex;
+}
+
+.text{
+    background-color: white;
+    align-self: center;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.displaypic{
+    background-image: url(./img/header-pic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: max-content;
+    height: 50vh;
+    position: relative;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 3rem;
+    padding: 2rem;
+    font-style: normal;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.displaypic, .text{
+    box-shadow: 4px 4px 10px -3px #595959;
+}
+
+.heading{
+    font-size: 3.5rem;
+}
+.content{
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: rgb(110, 110, 110);
+}
+
+.links{
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.links img{
+    width: 2.25rem;
+}
+
+.projectsHeader {
+    padding: 0 8%;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 3rem;
+    margin-top: 4rem;
+}
+
+.projects {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    padding: 1rem 8%;
+}
+.card {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: 4px 4px 20px -7px #525252;
+}
+
+.projectImg {
+    min-height: 17rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: white;
+    padding: 0 25%;
+}
+
+.card:nth-child(1)>.projectImg {
+    background-color: rgb(158, 28, 28);
+}
+.card:nth-child(2)>.projectImg{
+    background-color: rgb(124, 117, 202);
+}
+
+.card:nth-child(3)>.projectImg{
+    background-color: rgb(94, 143, 77);
+}
+
+.card:nth-child(4)>.projectImg{
+    background-color: rgb(195, 99, 180);
+}
+
+.card:nth-child(5)>.projectImg{
+    background-color: rgb(216, 143, 57);
+}
+
+.card:nth-child(6)>.projectImg{
+    background-color: rgb(75, 162, 210);
+}
+
+.projectName {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.projectName img {
+    width: 1.8rem;
+}
+
+.projectDesc {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.35rem;
+    color: rgb(110, 110, 110);
+    padding-bottom: 4rem;
+
+}
+.card>div:not(.projImg){
+    margin: 0 1rem;
+}
+
+.contact {
+    margin-top: 4rem;
+    background-color: rgb(8,145, 178);
+    padding: 4% 8%;
+    padding-right: 70%;
+    color: white;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+}
+
+.contact .header {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+.contact img {
+    width: 2rem;
+}
+
+.phone, .email {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact .links {
+    justify-content: start;
+}
+
+.contact .linkl>img {
+    width: 3rem;
+}
+
+@media (max-width:1300px)
+{
+    .text {
+        background-color: transparent;
+        box-shadow: none;
+        display: inline;
+        padding-right: 2rem;
+    }
+    .about {
+        background-color: white;
+        box-shadow: 4px 4px 10px -3px #595959;
+        display: inline;
+    }
+    .displaypic {
+        position: relative;
+        height: 34vh;
+        min-width: min-content;
+        top: -2vh;
+        left: -5vw;
+        width: 10rem;
+        float: left;
+    }
+    .about .heading, .about .contact, .about .links {
+        padding: 0 2rem;
+    }
+    .about .heading, .about .heading {
+        margin-bottom: 2rem;
+    }
+    .contact {
+        padding-right: 40%;
+    }
+}
+
+@media (max-width: 700px)
+{
+    body {
+        min-width: 500px;
+    }
+    .diagonal-box::before {
+        transform: skewY(-20deg);
+        top: calc(-1*tan(20deg)*50vw);
+        height: 35vh;
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+        background: none;
+        box-shadow: none;
+    }
+    .displaypic {
+        position: relative;
+        height: 35vh;
+        min-width: 100%;
+        top: 0;
+        left: 0;
+        float: left;
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        background-color: white;
+    }
+    .contact {
+        padding: 4% 8%;
+    }
+    .contact .header, .contact .links {
+        align-self: center;
+    }
+}
+@media (max-width:500px)
+{
+    .diagonal-box::before{
+        top: calc(-1*tan(20deg)*250px);
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body id="contentArea" onload="init()">
+    
+        <div id="heading_container">
+            <div id="heading_left"><h1>Wyatt's Reading List</h1></div>
+            <button class="show">Add Book</button>
+           <dialog id="dialog">
+             <form method="dialog">
+                 <p>
+                 <label>
+                     Title:
+                     <input id="newBookTitle" type="text" required>
+                 </label>
+                </p>
+                <p>
+                 <label>
+                    Author:
+                    <input id="newBookAuthor" type="text" required>
+                </label>
+            </p>
+            <p>
+                <label>
+                    Number Of Pages:
+                    <input id="newBookPages" type="text" required>
+                </label>
+            </p>
+            <div>
+                <input class="close" type="submit" value="Add Book">
+            </div>
+             </form>
+            </dialog>
+
+        </div>
+        <div id="main_content">
+
+        </div>
+    
+</body>
+</html>

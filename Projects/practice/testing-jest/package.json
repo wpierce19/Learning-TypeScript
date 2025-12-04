@@ -1,0 +1,14 @@
+{
+  "name": "testing-jest",
+  "main": "main.test.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch *.js"
+  },
+
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
+

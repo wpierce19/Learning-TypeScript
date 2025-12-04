@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Folders</title>
+</head>
+<body>
+  <h1>Your Folders</h1>
+  <form action="/folders" method="POST">
+    <input type="text" name="name" placeholder="New Folder Name" required>
+    <button type="submit">Create Folder</button>
+  </form>
+  <ul>
+    <% folders.forEach(function(folder) { %>
+      <li>
+        <a href="/folders/<%= folder.id %>"><%= folder.name %></a>
+      </li>
+    <% }); %>
+  </ul>
+  <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>

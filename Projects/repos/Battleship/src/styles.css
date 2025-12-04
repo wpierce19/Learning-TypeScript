@@ -1,0 +1,81 @@
+/* Game Boards */
+.board {
+    display: inline-block;
+    margin: 20px;
+  }
+  
+  /* Grid container */
+  .grid {
+    display: grid;
+    grid-template-columns: 30px repeat(10, 30px); /* Row labels + grid cells */
+    grid-template-rows: 30px repeat(10, 30px); /* Column labels + grid cells */
+    gap: 2px; /* Add spacing between cells */
+  }
+  
+  /* Individual cells */
+  .cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-sizing: border-box; /* Ensure padding/border is included in width/height */
+  }
+  
+  /* Row and Column Labels */
+  .label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Highlight Ship Cells */
+  .cell.ship {
+    background-color: lightblue; /* Indicates the presence of a ship */
+    border: 2px solid navy;
+  }
+  
+  /* Hit and Miss Indicators */
+  .cell.hit {
+    background-color: red;
+  }
+  
+  .cell.miss {
+    background-color: gray;
+  }
+  
+  /* Ship Container */
+  #ship-container {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+  }
+  
+  .ship {
+    width: fit-content;
+    height: 30px;
+    background-color: lightgreen;
+    text-align: center;
+    line-height: 30px;
+    cursor: grab;
+    border: 2px solid #006400;
+    padding: 0 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }

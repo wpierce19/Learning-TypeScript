@@ -1,0 +1,237 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font-family: "Roboto", serif;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    text-wrap: balance;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template: 1fr 4fr / 1fr 4fr;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2;
+    grid-column: 2;
+    background-color: white;
+    padding: 50px;
+    padding-top: 20px;
+    gap: 20px;
+}
+
+.card-container {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    align-items: start;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    grid-row: 2;
+    background-color: white;
+    align-items: center;
+    padding-top: 20px;
+    gap: 20px;
+}
+
+.sidebar::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 10%;
+    bottom: 10%;
+    width: 1px;
+    background-color: black;
+}
+
+.sidebar-button {
+    background-color: white;
+    border: 0;
+}
+
+.sidebar-button:hover {
+    border-bottom: solid 1px;
+    transform: scale(1.2);
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.headbar {
+    padding-left: 20%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    grid-column: 1/3;
+}
+
+.headbar::after {
+    content: '';
+    position: absolute;
+    left: 10%;
+    bottom: 1px;
+    width: 80%;
+    height: 1px;
+    background-color: black;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+dialog {
+    margin: auto;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 2px 5px;
+}
+
+.card {
+    display: grid;
+    grid-template: 1fr minmax(1fr, 400px) 1fr / 1fr 1fr 1fr 1fr;
+    border-radius: 30px;
+    box-shadow: 0px 2px 5px;
+    min-height: 150px;
+}
+
+.card-title {
+    grid-column: 1 / 4;
+    font-size: 25px;
+    font-weight: 300;
+    padding-left: 5%;
+}
+
+.card-desc {
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+    font-weight: 100;
+    justify-self: center;
+}
+
+.card-dueDate {
+    align-self: center;
+    padding-left: 5%;
+    grid-column: 1 / 3;
+    grid-row: 3;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.card-priority {
+    grid-column: 4;
+    grid-row: 3;
+}
+
+.card-check {
+    grid-column: 4;
+    width: 15px;
+    justify-self: center;
+}
+
+.circle {
+    align-self: center;
+    justify-self: center;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 3px solid;
+    background-color: rgb(0,0,0);
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.plus-sidebar {
+    height: 15px;
+    width: 15px;
+    align-self: flex-end;
+    margin: 10px;
+}
+
+.plus-sidebar:hover {
+    transform: scale(1.5);
+}
+
+.plus-task {
+    height: 15px;
+    width: 15px;
+    align-self: flex-end;
+    margin: 10px;
+}
+
+.plus-task:hover {
+    transform: scale(1.5);
+}
+
+.todo-icon {
+    height: 100px;
+}
+
+.big-title {
+    font-weight: 200;
+}
