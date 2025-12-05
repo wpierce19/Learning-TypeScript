@@ -1,5 +1,5 @@
-const removeFromArray = function(array, ...args) {
-    const newArray = [];
+const removeFromArray = function<T>(array: T[], ...args: T[]): T[] {
+    const newArray: T[] = [];
     array.forEach((item) => {
         if (!args.includes(item)) {
           newArray.push(item);
@@ -10,4 +10,4 @@ const removeFromArray = function(array, ...args) {
 };
 
 // Do not edit below this line
-module.exports = removeFromArray;
+export default removeFromArray;
