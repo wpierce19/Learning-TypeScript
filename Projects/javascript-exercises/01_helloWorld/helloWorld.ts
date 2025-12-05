@@ -1,5 +1,5 @@
 const helloWorld = (): string => {
-  return "Hello World!";
+  return "Hello, World!";
 }
 
 helloWorld();

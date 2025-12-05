@@ -1,4 +1,4 @@
-const repeatString = function(str, num) {
+const repeatString = function(str: string, num: number) {
     let string = "";
     if (num < 0){
         return "ERROR";
@@ -13,4 +13,4 @@ const repeatString = function(str, num) {
 };
 
 // Do not edit below this line
-module.exports = repeatString;
+export default repeatString;
